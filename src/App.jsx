@@ -1,5 +1,5 @@
 import "./App.css";
-import ExcelViewer from "./assets/widgets/excel_viewer";
+import ExcelViewer from "./excel_viewer";
 
 function App() {
   return (
