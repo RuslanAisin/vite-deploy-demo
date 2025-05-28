@@ -49,6 +49,7 @@ const ExcelViewer = () => {
         const jsonData = XLSX.utils.sheet_to_json(worksheet, {
           header: 1,
         }) as any[][];
+        // @ts-ignore
         const headers: TableColumn[] =
           jsonData[0]?.map((header, index) => ({
             title: header?.toString() || `Column ${index + 1}`,
@@ -137,6 +138,7 @@ const ExcelViewer = () => {
           padding: "24px",
           width: "2500px",
           margin: "0 auto",
+          // maxHeight: "00px",
         }}
       >
         <Card
@@ -173,6 +175,7 @@ const ExcelViewer = () => {
           />
 
           <Table
+            // @ts-ignore
             columns={columns as ColumnTypes}
             dataSource={filteredData}
             bordered
